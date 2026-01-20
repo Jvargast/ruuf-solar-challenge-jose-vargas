@@ -1,27 +1,61 @@
-# Desafío de Paneles Solares - Ruuf 
+# Tarea Dev Junior - Ruuf
 
-¡Hola! Esta es mi solución para el desafío de optimización de paneles. El objetivo es calcular cuántos paneles rectangulares caben en un techo, tratando de no desperdiciar nada de espacio.
+## 🎯 Objetivo
 
-## ¿Cómo resolví el problema?
+El objetivo de este ejercicio es poder entender tus habilidades como programador/a, la forma en que planteas un problema, cómo los resuelves y finalmente cómo comunicas tu forma de razonar y resultados.
 
-En lugar de solo dividir el área total, el cual fue el pensamiento inicial, me imaginé el techo como en una hoja de cuaderno donde vas poniendo las piezas. Mi lógica fue la siguiente:
+## 🛠️ Problema
 
-1. **Pruebo dos caminos:** El programa calcula qué pasa si pongo los paneles "parados" y qué pasa si los pongo "acostados". Como resultado final, se queda con el número más alto, es decir, la mayor cantidad de paneles.
-2. **Aprovecho los restos:** Después de llenar la mayor parte del techo, siempre quedan unos restos de espacio en los bordes. Mi código revisa si en esos espacios sobrantes de área puedo meter algún panel extra dándolo vuelta.
+El problema a resolver consiste en encontrar la máxima cantidad de rectángulos de dimensiones "a" y "b" (paneles solares) que caben dentro de un rectángulo de dimensiones "x" e "y" (techo).
 
-## Lenguaje utilizado
+## 🚀 Cómo Empezar
 
-- **TypeScript:** Elegí este lenguaje porque es con el que tengo más familiaridad. Además, me gusta el manejo de variables y tipos que ofrece.
+### Opción 1: Solución en TypeScript
+```bash
+cd typescript
+npm install
+npm start
+```
 
-## Inicialización
+### Opción 2: Solución en Python
+```bash
+cd python
+python3 main.py
+```
 
-Para ver los resultados en la terminal:
+## ✅ Casos de Prueba
 
-1. Instalar las dependencias necesarias:
-   ```bash
-   npm install
-   ```
-2. Ejecutar pruebas:
-   ```bash
-   npm start
-   ```
+Tu solución debe pasar los siguientes casos de prueba:
+
+- Paneles 1x2 y techo 2x4 ⇒ Caben 4
+- Paneles 1x2 y techo 3x5 ⇒ Caben 7
+- Paneles 2x2 y techo 1x10 ⇒ Caben 0
+
+---
+
+## 📝 Tu Solución
+
+
+
+---
+
+## 💰 Bonus (Opcional)
+
+Si completaste alguno de los ejercicios bonus, explica tu solución aquí:
+
+### Bonus Implementado
+*[Indica cuál bonus implementaste: Opción 1 (techo triangular) o Opción 2 (rectángulos superpuestos)]*
+
+
+
+### Explicación del Bonus
+*[Explica cómo adaptaste tu algoritmo para resolver el bonus]*
+
+---
+
+## 🤔 Supuestos y Decisiones
+
+Primero, en lugar de solo dividir el área total, el cual fue el pensamiento inicial, me imaginé el techo como en una hoja de cuaderno donde vas poniendo las piezas y mi lógica fue la siguiente:
+
+1. **Probar dos caminos:** El programa calcula qué pasa si pongo los paneles "parados" y qué pasa si los pongo "acostados". Como resultado final, se queda con el número más alto, es decir, la mayor cantidad de paneles.
+2. **Aprovechar los restos:** Después de llenar la mayor parte del techo, siempre quedan unos restos de espacio en los bordes. Mi código revisa si en esos espacios sobrantes de área puedo meter algún panel extra dándolo vuelta.
