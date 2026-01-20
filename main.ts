@@ -18,8 +18,35 @@ function calculatePanels(
   roofWidth: number,
   roofHeight: number,
 ): number {
+  // Orientación inicial -> Panel Normal (panelWidth x panelHeight)
+  const grid1 =
+    Math.floor(roofWidth / panelWidth) * Math.floor(roofHeight / panelHeight);
 
-  return 0;
+  // Sobran espacios a la derecha y abajo
+  const extRight1 =
+    Math.floor((roofWidth % panelWidth) / panelHeight) *
+    Math.floor(roofHeight / panelWidth);
+  const extBottom1 =
+    Math.floor((roofHeight % panelHeight) / panelWidth) *
+    Math.floor(roofWidth / panelHeight);
+
+  const total1 = grid1 + Math.max(extRight1, extBottom1);
+
+  // Orientación 2 -> Panel Rotado (panelHeight x panelWidth)
+  const grid2 =
+    Math.floor(roofWidth / panelHeight) * Math.floor(roofHeight / panelWidth);
+
+  const extRight2 =
+    Math.floor((roofWidth % panelHeight) / panelWidth) *
+    Math.floor(roofHeight / panelHeight);
+  const extBottom2 =
+    Math.floor((roofHeight % panelWidth) / panelHeight) *
+    Math.floor(roofWidth / panelHeight);
+
+  const total2 = grid2 + Math.max(extRight2, extBottom2);
+
+  // Se retorna el valor máximo para ambas orientaciones
+  return Math.max(total1, total2);
 }
 
 function main(): void {
