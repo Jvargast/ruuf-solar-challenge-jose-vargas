@@ -35,7 +35,7 @@ Tu solución debe pasar los siguientes casos de prueba:
 
 ## 📝 Tu Solución
 
-
+[Video en proceso de carga - Se actualizará a la brevedad]
 
 ---
 
